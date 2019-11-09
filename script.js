@@ -59,7 +59,7 @@ function geoFindMe() {
         main.append(br4);   
         var lat = response.coord.lat;
         var lon = response.coord.lon;
-        var UVindexURL = "http://api.openweathermap.org/data/2.5/uvi?appid=e36819190b77325aed260ffeaa672f41&lat=" + lat +"&lon=" + lon +"&units=imperial";
+        var UVindexURL = "https://api.openweathermap.org/data/2.5/uvi?appid=e36819190b77325aed260ffeaa672f41&lat=" + lat +"&lon=" + lon +"&units=imperial";
    
         
         $.ajax({
@@ -236,7 +236,7 @@ btn.on("click", function(event) {
         main.append(br4);   
         var lat = response.coord.lat;
         var lon = response.coord.lon;
-        var UVindexURL = "http://api.openweathermap.org/data/2.5/uvi?appid=e36819190b77325aed260ffeaa672f41&lat=" + lat +"&lon=" + lon + "&units=imperial";
+        var UVindexURL = "https://api.openweathermap.org/data/2.5/uvi?appid=e36819190b77325aed260ffeaa672f41&lat=" + lat +"&lon=" + lon + "&units=imperial";
    
         
         $.ajax({
