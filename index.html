@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <header id="header">Weather Dashboard</header>
+    <div class=" row ">
+            <div class="col-md-3">
+                <form id="searchCol">
+                    <label for="search">Search the city</label>
+                    <br>
+                    <input type="text" id="search">
+    
+                    <button id ="searchBtn" type="submit">Search</button>
+                    <button id="home" type="button">HOME</button>
+                    <h2>Search History</h2>
+                    <div id="cityList"> </div>
+                </form>
+            </div>
+    
+            <div class="row col-md-9">
+    
+                <div class="col-md-12" id="main">
+                   
+                    <p id = "status"></p>
+                    <a id = "map-link" target="_blank"></a>
+    
+    
+    
+    
+    
+                </div>
+                <div class="col-md-12">
+                    <h1>5-Day Forecast:</h1>
+                </div>
+    
+    
+                <div class="col-md-2 fdays" id="box1">
+    
+                </div>
+                <div class="col-md-2 fdays" id="box2">
+    
+                </div>
+                <div class="col-md-2 fdays" id="box3">
+    
+                </div>
+    
+                <div class="col-md-2 fdays" id="box4">
+    
+                </div>
+                <div class="col-md-2 fdays" id="box5">
+    
+                </div>
+    
+    
+    
+    
+    
+    
+            </div>
+    
+    
+        </div>
+       
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
