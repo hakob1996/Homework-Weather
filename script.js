@@ -30,7 +30,7 @@ function geoFindMe() {
       status.textContent = '';
       mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
       mapLink.textContent = ` ${latitude}  ${longitude} `;
-      var currentLoc = "https://api.openweathermap.org/data/2.5/weather?appid=e36819190b77325aed260ffeaa672f41&lat=" + `${latitude}` +"&lon=" + `${longitude}` +"&units=imperial";
+      var currentLoc = "https://api.openweathermap.org/data/3.0/weather?appid=e36819190b77325aed260ffeaa672f41&lat=" + `${latitude}` +"&lon=" + `${longitude}` +"&units=imperial";
       mapLink.textContent="";
         
         $.ajax({
@@ -59,7 +59,7 @@ function geoFindMe() {
         main.append(br4);   
         var lat = response.coord.lat;
         var lon = response.coord.lon;
-        var UVindexURL = "https://api.openweathermap.org/data/2.5/uvi?appid=e36819190b77325aed260ffeaa672f41&lat=" + lat +"&lon=" + lon +"&units=imperial";
+        var UVindexURL = "https://api.openweathermap.org/data/3.0/uvi?appid=e36819190b77325aed260ffeaa672f41&lat=" + lat +"&lon=" + lon +"&units=imperial";
    
         
         $.ajax({
@@ -70,7 +70,7 @@ function geoFindMe() {
             UVindex.text("UV Index: " + response.value );
             main.append(UVindex);
         });
-        var fdaysURL = "https://api.openweathermap.org/data/2.5/forecast?id="+response.id+"&appid=e36819190b77325aed260ffeaa672f41&units=imperial";
+        var fdaysURL = "https://api.openweathermap.org/data/3.0/forecast?id="+response.id+"&appid=e36819190b77325aed260ffeaa672f41&units=imperial";
         $.ajax({
          url: fdaysURL,
          method: "GET"
@@ -160,7 +160,7 @@ function geoFindMe() {
   geoFindMe();
   
 for(var i=0; i<cityArr.length; i++){
-    var iUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityArr[i] + "&APPID=e36819190b77325aed260ffeaa672f41&units=imperial";
+    var iUrl = "https://api.openweathermap.org/data/3.0/weather?q=" + cityArr[i] + "&APPID=e36819190b77325aed260ffeaa672f41&units=imperial";
     $.ajax({
         url: iUrl,
         method: "GET"
@@ -194,7 +194,7 @@ btn.on("click", function(event) {
     
     for(var i=0; i<cityArr.length; i++){
 
-        var iUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityArr[i] + "&APPID=e36819190b77325aed260ffeaa672f41&units=imperial";
+        var iUrl = "https://api.openweathermap.org/data/3.0/weather?q=" + cityArr[i] + "&APPID=e36819190b77325aed260ffeaa672f41&units=imperial";
         $.ajax({
             url: iUrl,
             method: "GET"
@@ -209,7 +209,7 @@ btn.on("click", function(event) {
        
     
     }
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&APPID=e36819190b77325aed260ffeaa672f41&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/3.0/weather?q=" + cityName + "&APPID=e36819190b77325aed260ffeaa672f41&units=imperial";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -236,7 +236,7 @@ btn.on("click", function(event) {
         main.append(br4);   
         var lat = response.coord.lat;
         var lon = response.coord.lon;
-        var UVindexURL = "https://api.openweathermap.org/data/2.5/uvi?appid=e36819190b77325aed260ffeaa672f41&lat=" + lat +"&lon=" + lon + "&units=imperial";
+        var UVindexURL = "https://api.openweathermap.org/data/3.0/uvi?appid=e36819190b77325aed260ffeaa672f41&lat=" + lat +"&lon=" + lon + "&units=imperial";
    
         
         $.ajax({
@@ -249,7 +249,7 @@ btn.on("click", function(event) {
         });
        
        
-        var fdaysURL = "https://api.openweathermap.org/data/2.5/forecast?id="+response.id+"&appid=e36819190b77325aed260ffeaa672f41&units=imperial";
+        var fdaysURL = "https://api.openweathermap.org/data/3.0/forecast?id="+response.id+"&appid=e36819190b77325aed260ffeaa672f41&units=imperial";
         $.ajax({
          url: fdaysURL,
          method: "GET"
