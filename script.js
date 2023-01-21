@@ -30,7 +30,8 @@ function geoFindMe() {
       status.textContent = '';
       mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
       mapLink.textContent = ` ${latitude}  ${longitude} `;
-      var currentLoc = "https://api.openweathermap.org/data/3.0/weather?appid=e36819190b77325aed260ffeaa672f41&lat=" + `${latitude}` +"&lon=" + `${longitude}` +"&units=imperial";
+      var currentLoc = "https://api.openweathermap.org/data/3.0/onecall?lat= + `${latitude}` + "&lon=" + `${longitude}` + &exclude={part}&appid={e36819190b77325aed260ffeaa672f41"
+};
       mapLink.textContent="";
         
         $.ajax({
